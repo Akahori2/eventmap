@@ -1,0 +1,26 @@
+{
+  "short_name": "EVENT MAP!",
+  "name": "EVENT MAP!",
+  "icons": [{
+    "src": "pwa_image_128.jpg",
+    "type": "image/png",
+    "sizes": "128x128"
+  }, {
+    "src": "pwa_image_180.png",
+    "type": "image/png",
+    "sizes": "180x180"
+  }, {
+    "src": "pwa_image_192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }, {
+    "src": "pwa_image_512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3f51b5",
+  "background_color": "#3f51b5"
+}
