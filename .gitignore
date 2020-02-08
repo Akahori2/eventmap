@@ -27,3 +27,4 @@ yarn-error.log*
 getter
 build
 node_modules
+credentials
