@@ -15,7 +15,7 @@ const styles = props => ({
     verticalAlign: "middle"
   },
   circle: {
-    margin: "0 auto"
+    margin: "0 auto",
   }
 })
 

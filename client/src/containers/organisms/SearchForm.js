@@ -263,6 +263,8 @@ class SearchForm extends Component {
             <SearchIcon />
           </Button>
         </div>
+
+
         <div className={classes.formFooter}>
           <div className={classes.socialButton}>
             <a

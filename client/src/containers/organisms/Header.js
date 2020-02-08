@@ -20,18 +20,16 @@ import HeaderButton from "../../components/atoms/HeaderButton"
 const styles = theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    height: "40px"
+    height: "40px",
   },
   toolbar: {
     display: "flex",
     alignItems: "flex-start",
+    height: "40px",
 
-    [theme.breakpoints.down("sm")]: {
-      height: "50px"
-    },
-    [theme.breakpoints.up("sm")]: {
-      height: "40px"
-    }
+  },
+  headerButton: {
+    marginTop: "2px"
   }
 })
 
@@ -42,24 +40,26 @@ function Header({ classes, actions }) {
         <Typography variant="h1" color="inherit">
           EVENT MAP!
         </Typography>
-        <HeaderButton
-          icon={<SettingsIcon />}
-          onClickAction={() => {
-            actions.changeSettingsDialogOpen(true)
-          }}
-        />
-        <HeaderButton
-          icon={<HelpIcon />}
-          onClickAction={() => {
-            actions.changeHowToUseDialogOpen(true)
-          }}
-        />
-        <HeaderButton
-          icon={<MailIcon />}
-          onClickAction={() =>
-            window.open("https://goo.gl/forms/4L4LAoTdsVs0vbHp2", "_blank")
-          }
-        />
+        <div className={classes.headerButton}>
+          <HeaderButton
+            icon={<SettingsIcon />}
+            onClickAction={() => {
+              actions.changeSettingsDialogOpen(true)
+            }}
+          />
+          <HeaderButton
+            icon={<HelpIcon />}
+            onClickAction={() => {
+              actions.changeHowToUseDialogOpen(true)
+            }}
+          />
+          <HeaderButton
+            icon={<MailIcon />}
+            onClickAction={() =>
+              window.open("https://goo.gl/forms/4L4LAoTdsVs0vbHp2", "_blank")
+            }
+          />
+        </div>
       </Toolbar>
     </AppBar>
   )

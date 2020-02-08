@@ -67,8 +67,3 @@ code {
 .fb_iframe_widget > span {
   vertical-align: baseline !important;
 }
-
-.iconImage {
-  vertical-align: middle;
-  padding-bottom:1px;
-}

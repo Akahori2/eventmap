@@ -1,7 +1,8 @@
 import React from "react"
 import { withStyles } from "@material-ui/core/styles"
 import moment from "moment"
-import Divider from "./Divider"
+import Divider from "../atoms/Divider"
+import ConnpassIcon from "../atoms/ConnpassIcon"
 
 const styles = theme => ({
   catch: {
@@ -18,7 +19,8 @@ const styles = theme => ({
 function IntroduceEvent({ classes, currentEvent, isLastEvent, ...props }) {
   return (
     <>
-      <img src="./connpass_logo_4.png" alt="" className="iconImage" />
+      {/* <img src="./connpass_logo_4.png" alt="" className="iconImage" /> */}
+      <ConnpassIcon />
       <a
         href={currentEvent.event_url}
         target="_blank"

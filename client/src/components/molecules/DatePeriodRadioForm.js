@@ -16,6 +16,15 @@ const styles = theme => ({
     [theme.breakpoints.up("sm")]: {
       paddingTop: "41px"
     }
+  },
+  radio: {
+    [theme.breakpoints.down("sm")]: {
+      margin: "4px 10px 4px 12px"
+    },
+    [theme.breakpoints.up("sm")]: {
+      margin: "10px 10px 6px 12px"
+    },
+    padding: "0px"
   }
 })
 
@@ -36,13 +45,13 @@ function DatePeriodRadioForm({
       >
         <FormControlLabel
           value={DATE_SELECT_DATA.WITH_IN_A_WEEK}
-          control={<Radio color="secondary" />}
+          control={<Radio color="secondary" className={classes.radio}/>}
           label="1週間以内"
           disabled={dateGroup === DATE_SELECT_DATA.CALENDAR}
         />
         <FormControlLabel
           value={DATE_SELECT_DATA.WITH_IN_3_WEEKS}
-          control={<Radio color="secondary" />}
+          control={<Radio color="secondary" className={classes.radio}/>}
           label="3週間以内"
           disabled={dateGroup === DATE_SELECT_DATA.CALENDAR}
         />

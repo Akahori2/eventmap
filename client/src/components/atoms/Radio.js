@@ -4,13 +4,7 @@ import { withStyles } from "@material-ui/core/styles"
 
 const styles = theme => ({
   radio: {
-    [theme.breakpoints.down("sm")]: {
-      margin: "4px 10px 4px 12px"
-    },
-    [theme.breakpoints.up("sm")]: {
-      margin: "10px 10px 6px 12px"
-    },
-    padding: "0px"
+
   }
 })
 
