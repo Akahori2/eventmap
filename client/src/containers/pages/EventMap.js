@@ -20,8 +20,9 @@ import { connect } from "react-redux"
 import Header from "../organisms/Header"
 
 import withWidth, { isWidthUp } from "@material-ui/core/withWidth"
+import * as STYLE_DATA from "../../utils/styleData"
 
-const drawerWidthPC = 255
+// const drawerWidthPC = 255
 
 const styles = theme => ({
   root: {
@@ -32,7 +33,7 @@ const styles = theme => ({
       width: "100vw"
     },
     [theme.breakpoints.up("sm")]: {
-      width: drawerWidthPC
+      width: STYLE_DATA.DRAWER_WIDTH_PC
     }
   },
   content: {
@@ -40,9 +41,9 @@ const styles = theme => ({
   },
   map: {
     [theme.breakpoints.up("sm")]: {
-      paddingLeft: drawerWidthPC
+      marginLeft: STYLE_DATA.DRAWER_WIDTH_PC
     },
-    paddingTop: "40px"
+    marginTop: STYLE_DATA.HEADER_HEIGHT
   }
 })
 

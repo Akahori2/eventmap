@@ -22,9 +22,11 @@ import Circle from "../../components/atoms/Circle"
 
 import * as MAP_BASIC_DATA from "../../utils/mapBasicData"
 
-import GOOGLE_MAP_API_KEY from "../../../credentials/googleMapApikey"
+import { GOOGLE_MAP_API_KEY } from "../../credentials/googleMapApikey"
 
-const WINDOW_HEIGHT_PC = "calc(100vh - 40px)"
+import * as STYLE_DATA from "../../utils/styleData"
+
+const WINDOW_HEIGHT_PC = `calc(100vh - ${STYLE_DATA.HEADER_HEIGHT})`
 const WINDOW_HEIGHT_SP = window.innerHeight - 40 - 50 + "px"
 
 class Map extends Component {

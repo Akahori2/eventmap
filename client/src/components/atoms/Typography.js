@@ -1,6 +1,7 @@
 import MuiTypography from "@material-ui/core/Typography"
 import React from "react"
 import { withStyles } from "@material-ui/core/styles"
+import * as STYLE_DATA from "../../utils/styleData"
 
 const styles = theme => ({
   typography: {
@@ -8,7 +9,7 @@ const styles = theme => ({
     fontSize: "2em",
     flexGrow: "1",
     marginTop: "5px",
-    height: "40px"
+    height: STYLE_DATA.HEADER_HEIGHT
   }
 })
 

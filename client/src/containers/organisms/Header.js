@@ -17,20 +17,21 @@ import { connect } from "react-redux"
 import * as actions from "../../actions/"
 import HeaderButton from "../../components/atoms/HeaderButton"
 
+import * as STYLE_DATA from "../../utils/styleData"
+
 const styles = theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    height: "40px",
+    height: STYLE_DATA.HEADER_HEIGHT,
   },
   toolbar: {
     display: "flex",
     alignItems: "flex-start",
-    height: "40px",
-
+    height: STYLE_DATA.HEADER_HEIGHT,
   },
   headerButton: {
     marginTop: "2px"
-  }
+  },
 })
 
 function Header({ classes, actions }) {
@@ -40,7 +41,7 @@ function Header({ classes, actions }) {
         <Typography variant="h1" color="inherit">
           EVENT MAP!
         </Typography>
-        <div className={classes.headerButton}>
+        {/* <div className={classes.headerButton}> */}
           <HeaderButton
             icon={<SettingsIcon />}
             onClickAction={() => {
@@ -59,7 +60,7 @@ function Header({ classes, actions }) {
               window.open("https://goo.gl/forms/4L4LAoTdsVs0vbHp2", "_blank")
             }
           />
-        </div>
+        {/* </div> */}
       </Toolbar>
     </AppBar>
   )

@@ -30,6 +30,7 @@ import SearchTypeRadioForm from "../../components/molecules/SearchTypeRadioForm"
 
 import * as MAP_BASIC_DATA from "../../utils/mapBasicData"
 import * as DATE_SELECT_DATA from "../../utils/dateSelectData"
+import * as STYLE_DATA from "../../utils/styleData"
 
 const styles = theme => ({
   formWrapper: {
@@ -41,7 +42,8 @@ const styles = theme => ({
   formMain: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: STYLE_DATA.HEADER_HEIGHT,
   },
   button: {
     marginTop: "8px",
@@ -77,7 +79,7 @@ const styles = theme => ({
       position: "relative"
     },
     [theme.breakpoints.up("sm")]: {
-      width: "254px",
+      width: STYLE_DATA.DRAWER_WIDTH_PC,
       position: "absolute"
     }
   },
@@ -93,7 +95,7 @@ const styles = theme => ({
       bottom: 0
     },
     [theme.breakpoints.up("sm")]: {
-      width: "254px",
+      width: STYLE_DATA.DRAWER_WIDTH_PC,
       position: "absolute",
       bottom: 40
     }
