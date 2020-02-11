@@ -148,7 +148,7 @@ class SettingsDialog extends React.Component {
     if (localSavedSearchWords) {
       this.setState({ saveSearchWords: localSavedSearchWords })
     } else {
-      this.setState({ saveSearchWords: DATE_SELECT_DATA.CALENDAR })
+      this.setState({ saveSearchWords: "" })
     }
   }
 

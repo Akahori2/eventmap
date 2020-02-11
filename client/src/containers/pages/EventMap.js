@@ -43,7 +43,7 @@ const styles = theme => ({
     [theme.breakpoints.up("sm")]: {
       marginLeft: STYLE_DATA.DRAWER_WIDTH_PC
     },
-    marginTop: STYLE_DATA.HEADER_HEIGHT
+    paddingTop: STYLE_DATA.HEADER_HEIGHT
   }
 })
 

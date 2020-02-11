@@ -32,6 +32,9 @@ import * as MAP_BASIC_DATA from "../../utils/mapBasicData"
 import * as DATE_SELECT_DATA from "../../utils/dateSelectData"
 import * as STYLE_DATA from "../../utils/styleData"
 
+import SocialButtons from "../../components/molecules/SocialButtons"
+import Copyright from "../../components/atoms/Copyright"
+
 const styles = theme => ({
   formWrapper: {
     //iphone5s等で縦スクロールを出すため
@@ -183,7 +186,6 @@ class SearchForm extends Component {
       actions.requestData()
       axios
         .get("/api/events", {
-          //クエリストリングの内容を指定
           params: {
             keywords: form.keywords,
             searchType: form.dateGroup,
@@ -269,61 +271,12 @@ class SearchForm extends Component {
 
         <div className={classes.formFooter}>
           <div className={classes.socialButton}>
-            <a
-              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-              className="twitter-share-button"
-              data-show-count="false"
-              data-size="large"
-              data-related="akahori_s"
-            >
-              ツイート
-            </a>
-            <span style={{ marginRight: "2px" }}></span>
-            <div
-              className="fb-share-button"
-              data-href="https://event-map.info"
-              data-layout="button"
-              data-size="large"
-              data-mobile-iframe="false"
-            >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fevent-map.info%2F&amp;src=sdkpreparse"
-                className="fb-xfbml-parse-ignore"
-              >
-                シェア
-              </a>
-            </div>
-            <span style={{ marginRight: "2px" }}></span>
-            <a
-              href="http://b.hatena.ne.jp/entry/"
-              className="hatena-bookmark-button"
-              data-hatena-bookmark-layout="basic"
-              data-hatena-bookmark-width="20"
-              data-hatena-bookmark-height="28"
-              title="このエントリーをはてなブックマークに追加"
-            >
-              <img
-                src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
-                alt="このエントリーをはてなブックマークに追加"
-                width="20"
-                height="20"
-                style={{ border: "none" }}
-              />
-            </a>
+            <SocialButtons />
           </div>
-          <p className={classes.copyright}>
-            © 2019-2020{" "}
-            <a
-              href="https://twitter.com/akahori_s"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              @akahori_s
-            </a>{" "}
-          </p>
+          <div className={classes.copyright}>
+            <p><Copyright /></p>
+          </div>
+
         </div>
       </div>
     )

@@ -20,7 +20,7 @@ function IntroduceEvent({ classes, currentEvent, isLastEvent, ...props }) {
   return (
     <>
       {/* <img src="./connpass_logo_4.png" alt="" className="iconImage" /> */}
-      <ConnpassIcon />
+      <ConnpassIcon />{" "}
       <a
         href={currentEvent.event_url}
         target="_blank"

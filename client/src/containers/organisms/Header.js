@@ -29,9 +29,6 @@ const styles = theme => ({
     alignItems: "flex-start",
     height: STYLE_DATA.HEADER_HEIGHT,
   },
-  headerButton: {
-    marginTop: "2px"
-  },
 })
 
 function Header({ classes, actions }) {
@@ -41,26 +38,24 @@ function Header({ classes, actions }) {
         <Typography variant="h1" color="inherit">
           EVENT MAP!
         </Typography>
-        {/* <div className={classes.headerButton}> */}
-          <HeaderButton
-            icon={<SettingsIcon />}
-            onClickAction={() => {
-              actions.changeSettingsDialogOpen(true)
-            }}
-          />
-          <HeaderButton
-            icon={<HelpIcon />}
-            onClickAction={() => {
-              actions.changeHowToUseDialogOpen(true)
-            }}
-          />
-          <HeaderButton
-            icon={<MailIcon />}
-            onClickAction={() =>
-              window.open("https://goo.gl/forms/4L4LAoTdsVs0vbHp2", "_blank")
-            }
-          />
-        {/* </div> */}
+        <HeaderButton
+          icon={<SettingsIcon />}
+          onClickAction={() => {
+            actions.changeSettingsDialogOpen(true)
+          }}
+        />
+        <HeaderButton
+          icon={<HelpIcon />}
+          onClickAction={() => {
+            actions.changeHowToUseDialogOpen(true)
+          }}
+        />
+        <HeaderButton
+          icon={<MailIcon />}
+          onClickAction={() =>
+            window.open("https://goo.gl/forms/4L4LAoTdsVs0vbHp2", "_blank")
+          }
+        />
       </Toolbar>
     </AppBar>
   )
