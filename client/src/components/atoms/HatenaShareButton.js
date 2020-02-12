@@ -1,4 +1,13 @@
 import React from "react"
+import { withStyles } from "@material-ui/core/styles"
+
+const styles = theme => ({
+  image: {
+    width: "20px",
+    height: "20px",
+    border: "none",
+  }
+})
 
 function HatenaShareButton({ ...props }) {
   return (
@@ -13,15 +22,12 @@ function HatenaShareButton({ ...props }) {
       <img
         src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
         alt="このエントリーをはてなブックマークに追加"
-        width="20"
-        height="20"
-        style={{ border: "none" }}
       />
     </a>
   )
 }
 
-export default HatenaShareButton
+export default withStyles(styles)(HatenaShareButton)
 
 
 
