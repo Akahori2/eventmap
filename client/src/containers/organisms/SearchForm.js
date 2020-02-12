@@ -55,7 +55,7 @@ const styles = theme => ({
   divider: {
     //やらないと高さ0でIE等で消える
     alignSelf: "stretch",
-    marginTop: 0,
+    marginTop: "4px",
     marginBottom: 0
   },
   textfield: {
@@ -248,15 +248,12 @@ class SearchForm extends Component {
             value={form.keywords}
           />
 
-          {isWidthUp("sm", width) ? (
+          {isWidthUp("sm", width) &&
             <Divider
               variant="middle"
               className={classes.divider}
-              style={{ marginTop: "4px" }}
             />
-          ) : (
-            ""
-          )}
+          }
           <Button
             className={classes.button}
             variant="contained"

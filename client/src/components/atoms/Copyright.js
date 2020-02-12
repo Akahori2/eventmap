@@ -4,6 +4,9 @@ import { withStyles } from "@material-ui/core/styles"
 const styles = theme => ({
   year: {
     marginRight: "5px"
+  },
+  image: {
+    textDecoration: "none"
   }
 })
 
@@ -15,7 +18,7 @@ function Copyright({ classes, color, ...props }) {
         href="https://twitter.com/akahori_s"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ textDecoration: "none" }}
+        className={classes.image}
       >
         @akahori_s
       </a>
