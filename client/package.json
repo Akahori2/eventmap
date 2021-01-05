@@ -6,7 +6,7 @@
     "@google/markerclustererplus": "^2.1.11",
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "better-react-spinkit": "^2.0.4",
     "es6-promise": "^4.2.6",
     "moment": "^2.24.0",
